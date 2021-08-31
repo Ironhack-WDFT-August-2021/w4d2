@@ -204,3 +204,21 @@ https://github.com/sindresorhus/awesome-nodejs#weird
 
 #### Some information about licenses for open source software
 https://choosealicense.com/licenses/
+
+### Using the filesystem module to read from and write to a file
+```js
+// require the filesystem module
+const fs = require('fs');
+
+// read content from a file (filename, character ecoding);
+fs.readFile('example.txt', 'utf-8', (err, data) => {
+	if (err) {
+		console.log(err);
+	}
+	const content = data;
+	console.log(content);
+	// write the content to a txt file - if the file does not exist
+	// it is created
+	fs.writeFileSync('newFile.txt', data);
+});
+```
