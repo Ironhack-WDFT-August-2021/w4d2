@@ -54,19 +54,19 @@ console.log(greetFunction())
 const fs = require('fs');
 
 // read content from a file (filename, character ecoding);
-fs.readFile('example.txt', 'utf-8', (err, data) => {
-	if (err) {
-		console.log(err);
-	}
-	const content = data;
-	console.log(content);
-	// write the content to a txt file - if the file does not exist
-	// it is created
-	fs.writeFileSync('newFile.txt', data);
-});
+// fs.readFile('example.txt', 'utf-8', (err, data) => {
+// 	if (err) {
+// 		console.log(err);
+// 	}
+// 	const content = data;
+// 	console.log(content);
+// 	// write the content to a txt file - if the file does not exist
+// 	// it is created
+// 	fs.writeFileSync('newFile.txt', data);
+// });
 
 // passing in a parameter to the terminal command - we can 
 // access it via process.argv
-// const param = process.argv.slice(2)[0];
+const param = process.argv.slice(2)[0];
 // deleting a file using unlink
-// if (param === 'delete') fs.unlinkSync('./newFile.txt');
+if (param === 'delete') fs.unlinkSync('./newFile.txt');
