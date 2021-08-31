@@ -64,3 +64,9 @@ fs.readFile('example.txt', 'utf-8', (err, data) => {
 	// it is created
 	fs.writeFileSync('newFile.txt', data);
 });
+
+// passing in a parameter to the terminal command - we can 
+// access it via process.argv
+// const param = process.argv.slice(2)[0];
+// deleting a file using unlink
+// if (param === 'delete') fs.unlinkSync('./newFile.txt');
